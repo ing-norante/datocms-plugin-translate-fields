@@ -36,7 +36,9 @@ export default async function translate(
       : 'api'
 
   const request = await fetch(
-    `https://lofficiel-cors-proxy.netlify.app/?url=${encodeURIComponent(`https://${apiVersion}.deepl.com/v2/translate?${params.toString()}`)}`,
+    `https://lofficiel-cors-proxy.netlify.app/?url=${encodeURIComponent(
+      `https://${apiVersion}.deepl.com/v2/translate?${params.toString()}`,
+    )}`,
   )
 
   if (request.status !== 200) {
